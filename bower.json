@@ -1,0 +1,15 @@
+{
+  "name": "socket.io-client",
+  "version": "0.9.17",
+  "homepage": "https://github.com/vkempys/socket.io-client",
+  "description": "old version of socket.io client with custom modifications",
+  "main": "socket.io.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
