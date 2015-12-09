@@ -2955,15 +2955,17 @@ var swfobject;
       self.socket.setBuffer(false);
     };
 
-    this.sendXHR = this.request('POST');
+    setTimeout(function() {
+      self.sendXHR = self.request('POST');
 
-    if (global.XDomainRequest && this.sendXHR instanceof XDomainRequest) {
-      this.sendXHR.onload = this.sendXHR.onerror = onload;
-    } else {
-      this.sendXHR.onreadystatechange = stateChange;
-    }
+      if (global.XDomainRequest && self.sendXHR instanceof XDomainRequest) {
+        self.sendXHR.onload = self.sendXHR.onerror = onload;
+      } else {
+        self.sendXHR.onreadystatechange = stateChange;
+      }
 
-    this.sendXHR.send(data);
+      self.sendXHR.send(data);
+    }, 10);
   };
 
   /**
