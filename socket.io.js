@@ -1526,9 +1526,9 @@ var io = ('undefined' === typeof module ? {} : module.exports);
       , 'try multiple transports': true
       , 'reconnect': true
       , 'reconnection delay': 500
-      , 'reconnection limit': Infinity
+      , 'reconnection limit': 10000
       , 'reopen delay': 3000
-      , 'max reconnection attempts': 10
+      , 'max reconnection attempts': 1000
       , 'sync disconnect on unload': false
       , 'auto connect': true
       , 'flash policy port': 10843
