@@ -7,7 +7,7 @@
  */
 
 var io = ('undefined' === typeof module ? {} : module.exports);
-(function() {
+(function(context) {
 
 /**
  * socket.io
@@ -23,7 +23,7 @@ var io = ('undefined' === typeof module ? {} : module.exports);
    * @namespace
    */
 
-  var io = exports;
+  io = exports;
 
   /**
    * Socket.IO version
@@ -110,7 +110,7 @@ var io = ('undefined' === typeof module ? {} : module.exports);
     return socket.of(uri.path.length > 1 ? uri.path : '');
   };
 
-})('object' === typeof module ? module.exports : (this.io = {}), this);
+})('object' === typeof module ? module.exports : (context.io = {}), this);
 /**
  * socket.io
  * Copyright(c) 2011 LearnBoost <dev@learnboost.com>
@@ -3667,4 +3667,4 @@ var swfobject;
 if (typeof define === "function" && define.amd) {
   define([], function () { return io; });
 }
-})();
+})(this);
